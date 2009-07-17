@@ -34,7 +34,8 @@
 		complete: function (XMLHttpRequest, textStatus) {
 		  var headers = XMLHttpRequest.getAllResponseHeaders().split("\n");
 		  var new_headers = {};
-		  for (key in headers) {
+		  var l = headers.length;
+		  for (var key=0;key<=l;key++) {
 			  if (headers[key].length != 0) {
 				  header = headers[key].split(": ");
 				  new_headers[header[0]] = header[1];
